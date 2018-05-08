@@ -1,7 +1,7 @@
 
 # News Analysis
 
-The purpose of this project was to learn about the general sentiment of the news published by various news organizations. Twitter's API was used to pulldown tweets from BBC World, CBS, CNN, Fox News, and the New York Times. The sentiments of the tweets were then analyzed using [vaderSentiment][1], a natural language processing library for determining the positivity and negativity expressed in sentences. This library is attuned for text published on social media.
+The purpose of this project was to learn about the general sentiment of the news published by various news organizations. Twitter's API was used to pull down tweets from BBC World, CBS, CNN, Fox News, and the New York Times. The sentiments of the tweets were then analyzed using [vaderSentiment][1], a natural language processing library for determining the positivity and negativity expressed in sentences. This library is attuned for text published on social media.
 
 [1]: https://github.com/cjhutto/vaderSentiment#features-and-updates
 
@@ -55,7 +55,7 @@ To have a clearer idea of how an organization's tweet sentiment compared with on
 
 ![png](https://github.com/amatthi55/Portfolio/blob/master/News_Sentiment_Analysis/Graphs/Overall%20Sentiment%20Analysis.png)
 
-We can see that CBS clearly has the most positive sentiments overall and that the rest of the news organziations have a net senitment score closer to zero. This indicates that the amount of positivty and negativty for each of these organziations is fairly balanced. These organization also have a negative average sentiment score.
+We can see that CBS clearly has the most positive sentiments overall and that the rest of the news organziations have a net sentiment score closer to zero. This indicates that the amount of positivty and negativty for each of these organziations is fairly balanced. These organization also have a negative average sentiment score.
 
 While the above graphs can give us an idea of how a news group's positivity compares with its negativity, it does not show how extreme their sentiments are. This next graph is a bar chart showing the sum of the squares of each group's overall senitment scores. The taller bar graphs belong to the companies that express the most extreme sentiments.
 
