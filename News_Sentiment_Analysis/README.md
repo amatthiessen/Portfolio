@@ -46,7 +46,7 @@ This method of analyzing sentiment is clearly flawed but it does have some succe
 
 To get an idea of the distribution of tweet sentiments for the various news groups, I plotted the overall sentiment of the tweets on the y-axis, how many tweets ago a tweet was posted on the x-axis, and color-coded the tweets based on who posted them.
 
-![png](https://github.com/amatthi55/Portfolio/blob/master/Twitter_Sentiment_Analysis/Graphs/Individual%20Tweet%20Analysis.png) 
+![png](https://github.com/amatthi55/Portfolio/blob/master/News_Sentiment_Analysis/Graphs/Individual%20Tweet%20Analysis.png) 
 
 One observation is that many of the tweets are considered completely neutral, which is understandable because many news organization typically try to refrain from expressing an opinion in a headline. Another observation is that CBS is the one group to tweet mainly positive content. The other organization's tweets are evenly divided between positive and negative.
 
