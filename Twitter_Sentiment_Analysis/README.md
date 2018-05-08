@@ -60,7 +60,7 @@ We can see that CBS clearly has the most positive sentiments overall and that th
 While the above graphs can give us an idea of how a news group's positivity compares with its negativity, it does not show how extreme their sentiments are. This next graph is a bar chart showing the sum of the squares of each group's overall senitment scores. The taller bar graphs belong to the companies that express the most extreme sentiments.
 
 
-![png](Graphs/Overall Sentiment Analysis_SS.png)
+![png](https://github.com/amatthi55/Portfolio/blob/master/Twitter_Sentiment_Analysis/Graphs/Overall%20Sentiment%20Analysis_SS.png)
 
 
 CBS expressed the most extreme sentiments over this time period, followed by the New York Times, and Fox News.
