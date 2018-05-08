@@ -53,7 +53,7 @@ One observation is that many of the tweets are considered completely neutral, wh
 
 To have a clearer idea of how an organization's tweet sentiment compared with one another, I created a bar chart showing the average for each organization's overall sentiment scores.
 
-![png](Graphs/Overall Sentiment Analysis.png)
+![png](https://github.com/amatthi55/Portfolio/blob/master/Twitter_Sentiment_Analysis/Graphs/Overall%20Sentiment%20Analysis.png)
 
 We can see that CBS clearly has the most positive sentiments overall and that the rest of the news organziations have a net senitment score closer to zero. This indicates that the amount of positivty and negativty for each of these organziations is fairly balanced. These organization also have a negative average sentiment score.
 
