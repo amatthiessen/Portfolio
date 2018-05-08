@@ -1,7 +1,7 @@
 
 # News Analysis
 
-The purpose of this project was to learn about the general sentiment of the news published by various news organizations. Twitter's API was used to pulldown tweets from BBC World, CBS, CNN, Fox News, and the New York Times. The senitments of the tweets were then analyzed using [vaderSentiment][1], a natural language processing library for determining the posivity and negativty contained in sentences. This library is attuned for text published on social media.
+The purpose of this project was to learn about the general sentiment of the news published by various news organizations. Twitter's API was used to pulldown tweets from BBC World, CBS, CNN, Fox News, and the New York Times. The sentiments of the tweets were then analyzed using [vaderSentiment][1], a natural language processing library for determining the posivity and negativty expressed in sentences. This library is attuned for text published on social media.
 
 [1]: https://github.com/cjhutto/vaderSentiment#features-and-updates
 
