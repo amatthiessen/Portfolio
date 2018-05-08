@@ -1,155 +1,73 @@
 
-Trends:
-1- CBS's last 100 tweets were, on average, dramatically more positive than the tweets of the other
-organizations. The overall sentiments of the other news companies were pretty similiar.
-2- According to the Vader Senitment Analyzer about 1/3 of the tweets pulled from these organizations are perfectly neutral with a compound sentiment score of 0.
-3- Fox News, the organization that is known as being one of the most extreme, actually had the most neutral overall Twitter sentiment score. Their mean positivity score and mean negativity score were 0.066 and 0.076 respectively.
+# News Analysis
 
+The purpose of this project was to learn about the general sentiment of the news published by various news organizations. Twitter's API was used to pulldown tweets from BBC World, CBS, CNN, Fox News, and the New York Times. The senitments of the tweets were then analyzed using [vaderSentiment][1], a natural language processing library for determining the posivity and negativty contained in sentences. This library is attuned for text published on social media.
 
+[1]: https://github.com/cjhutto/vaderSentiment#features-and-updates
 
-```python
-import json
-import tweepy
-from datetime import datetime
-import numpy as np
-from twitterapi import consumer_key, consumer_secret, access_token, access_token_secret
-import matplotlib.pyplot as plt 
-from pprint import pprint
-import pandas as pd
-import time
+![alt text](https://www.worldatlas.com/r/w728-h425-c728x425/upload/dd/36/4f/shutterstock-415584550.jpg)
 
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-analyzer = SentimentIntensityAnalyzer()
+### Data
+The data was collected on 3/23/2018 and consists of the last 100 tweets posted by the above-mentioned news organizations. Since news organziations tweet often, the data set contains tweets from about three days in March.
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
+Here is an example of a couple of tweets from BBC World:
 
-```
-
-
-```python
-handles = [ '@BBCWorld', '@CBS', '@CNN', '@FoxNews','@nytimes']
-
-
-#Collects the text of each tweet
-tweets = []
-#Collects the date of each tweet
-timestamps = []
-#This is used to create a list of media company names. List will be added to the dataframe 
-newsorg = []
-#This stores all of the values of the timestamps list once they have been converted to date objects
-converted = []
-#This collects the compound sentiment score of each tweet
-compl = []
-#This collects the positive sentiment score of each tweet
-posl= []
-#This collects the neutral sentiment score of each tweet
-neul= []
-#This collects the negative sentiment score of each tweet
-negl= []
-
-#This stores the integers 1 through 100 and is used to create the first graph
-tweet_num = []
-tweet_num = np.arange(1,101)
-
-
-#Loop through each media company
-for handle in handles:
+    "Half of African species 'face extinction' https://t.co/EndEdlKO9r"
     
-    #Loop through the api request five times for each company
-    for page in tweepy.Cursor(api.user_timeline, id = handle).pages(5):
-        public_tweets = page
-        
-        # Loop through all tweets
-        for tweet in public_tweets:
-            
-            tweets.append(tweet._json['text'])
-            timestamps.append(tweet._json["created_at"])
-            newsorg.append(handle)
-        
-#Convert timestamp elements to date objects
-for time in timestamps:
-    converted_time1 = datetime.strptime(time, "%a %b %d %H:%M:%S %z %Y")
-    converted.append(converted_time1)
-
-
-#Perform sentiment analysis on each tweet
-for sentence in tweets:
-
-    compl.append(analyzer.polarity_scores(sentence)["compound"])
-    posl.append(analyzer.polarity_scores(sentence)["pos"])
-    neul.append(analyzer.polarity_scores(sentence)["neu"])
-    negl.append(analyzer.polarity_scores(sentence)["neg"])
+    "Elon Musk pulls brands from Facebook https://t.co/4BxPvragQf![image.png](attachment:image.png)"
     
-#Create DF with all tweet information    
-sentiment_DF= pd.DataFrame({'Company': newsorg, 'Date':converted,'Tweets':tweets ,'Compound': compl,'Positive': posl,'Neutral': neul, 'Negative': negl})
-
-sentiment_DF.to_csv('News.csv')
-```
-
-Sentiment Analysis of Media Tweets
 
 
-```python
+### Analysis 
 
-#Subset dataframe into five objects, one for each company's compound sentiment scores
-bbc_sent = sentiment_DF.loc[sentiment_DF.loc[:,'Company'] == '@BBCWorld','Compound']
-cbs_sent = sentiment_DF.loc[sentiment_DF.loc[:,'Company'] == '@CBS','Compound']
-cnn_sent = sentiment_DF.loc[sentiment_DF.loc[:,'Company'] == '@CNN','Compound']
-fox_sent = sentiment_DF.loc[sentiment_DF.loc[:,'Company'] == '@FoxNews','Compound']
-nyt_sent = sentiment_DF.loc[sentiment_DF.loc[:,'Company'] == '@nytimes','Compound']
+All of the tweets were run through the SentimentIntensityAnalyzer function. The function breaks down what percentage of the tweet is positive, neutral, and negative. In addition, the function returns an overall sentiment score on a scale of -1.0 to 1.0. Scores less than -0.5 are negative, scores between -0.5 and 0.5 are neutral, and scores greater than 0.5 are positive. 
 
-#Plot scatter data for each company
-bbc = plt.scatter(tweet_num, bbc_sent, color = 'orange', edgecolor='black')
-cbs = plt.scatter(tweet_num, cbs_sent, color = 'blue', edgecolor='black')
-cnn = plt.scatter(tweet_num, cnn_sent, color = 'red', edgecolor='black')
-fox = plt.scatter(tweet_num, fox_sent, color = 'green', edgecolor='black')
-nyt = plt.scatter(tweet_num, nyt_sent, color = 'yellow', edgecolor='black')
+Here is an example of a tweet with its vaderSentiment scores:
 
-#Flip x-axis for better presentation
-plt.xlim(101,0)
+Tweet: "RT @BullCBS: The verdict is in...#Bull is the perfect Valentine! ‚Happy #ValentinesDay! https://t.co/poEejI4AnC"
 
-plt.title('Sentiment Analysis of Media Tweets (3/23/2018)')
-plt.xlabel("Tweets Ago")
-plt.ylabel("Tweet Polarity")
+Results: Negative: 0, Neutral: 0.534. Positive: 0.466, Overall: 0.8619
 
-plt.legend((bbc,cbs,cnn,fox,nyt),('BBC','CBS','CNN','Fox News','NYT'), loc='center left', bbox_to_anchor=(1, 0.5))
-
-plt.savefig('Individual Tweet Analysis', bbox_inches='tight', pad_inches=0)
-
-plt.show()
+We can get an understanding here of how the function works. The function detected no negativity because there were no obviously negative words. About half of the tweet was determined to be neutral and the other half was said to be positive because there is a lot of text in the tweet that is neutral, such as "The verdict is in", and there is also positivity with the words "perfect" and "Happy".
 
 
-```
+The vaderSentiment analyzer is far from perfect. Take a look at this tweet about tariffs.
 
 
-![png](output_4_0.png)
+Tweet: "BREAKING: China plans to slap tariffs on $3 billion worth of US products ranging from pork to steel pipes"
+
+Results: Negative: 0, Neutral: 0.851, Positive:	0.149, Overall: 0.3612
+
+Someone might feel that the tone of this tweet is negative because the word "slap" can mean to punish someone with something. The sentiment analyzer guessed, however, that the tweet was neutral. The sentiment analyzer also detected some positivity even though it is not clear what is positive in this tweet.
+
+This method of analyzing sentiment is clearly flawed but it does have some success at determining the sentiment of text.
+
+### Graphs
+
+To get an idea of the distribution of tweet sentiments for the various news groups, I plotted the overall sentiment of the tweets on the y-axis, how many tweets ago a tweet was posted on the x-axis, and color-coded the tweets based on who posted them.
+
+![png](Graphs/Individual Tweet Analysis.png) 
+
+One observation is that many of the tweets are considered completely neutral, which is understandable because many news organization typically try to refrain from expressing an opinion in a headline. Another observation is that CBS is the one group to tweet mainly positive content. The other organization's tweets are evenly divided between positive and negative.
 
 
+To have a clearer idea of how an organization's tweet sentiment compared with one another, I created a bar chart showing the average for each organization's overall sentiment scores.
 
-```python
-Overall Media Sentiment Based on Twitter
-```
+![png](Graphs/Overall Sentiment Analysis.png)
 
+We can see that CBS clearly has the most positive sentiments overall and that the rest of the news organziations have a net senitment score closer to zero. This indicates that the amount of positivty and negativty for each of these organziations is fairly balanced. These organization also have a negative average sentiment score.
 
-```python
-
-#Create a bar chart of overall sentiment for each company
-plt.bar(['BBC','CBS','CNN','Fox News','NYT'],[pd.Series(bbc_sent).mean(),pd.Series(cbs_sent).mean(),
-         pd.Series(cnn_sent).mean(),pd.Series(fox_sent).mean(),
-         pd.Series(nyt_sent).mean()], color = ['orange','blue','red','green', 'yellow'], edgecolor = ['black','black','black','black','black'])
-
-plt.title("Overall Media Sentiment Based on Twitter (3/23/2018)")
-plt.ylabel("Tweet Polarity")
-
-plt.savefig('Overall Sentiment Analysis')
-
-plt.show()
+While the above graphs can give us an idea of how a news group's positivity compares with its negativity, it does not show how extreme their sentiments are. This next graph is a bar chart showing the sum of the squares of each group's overall senitment scores. The taller bar graphs belong to the companies that express the most extreme sentiments.
 
 
-```
+![png](Graphs/Overall Sentiment Analysis_SS.png)
 
 
-![png](output_6_0.png)
+CBS expressed the most extreme sentiments over this time period, followed by the New York Times, and Fox News.
+
+
+### Observations
+It is clear that this method for analyzing sentiment can be very innaccurate. If we trust the accuracy of the sentiment analyzer, then our data suggests that CBS expresses more positivity than the other news organizations. The data also indicates that CBS, NYT, and Fox News express more of an opionion in their tweets than BBC and CNN do.
+
+We can find interesting insights in the data even if this senitment analyzer cannot guess sentiment well. CBS has a dramatically more positive score than the other news organizations. This may not mean that CBS's tweets are far more positive than other news tweets but, knowing what we know about vaderSentiment, we are fairly certain that they use far fewer words with generally negative connotations and far more words with generally positive connotations. CBS's greater use of positive concepts may just be a result of this news cycle or it may be a deliberate choice by their newsroom.
 
