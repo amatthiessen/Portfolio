@@ -63,7 +63,7 @@ crime_df = crime_df.loc[crime_df["Crime Code Description"] == "ASSAULT WITH DEAD
 crime_df = crime_df.loc[crime_df["Dates"] > "2017-05-01", :]
 ```
 
-Next I converted the latitude and longitude values from string to floats and stored them in a latitude list  and alongitude lists. I noticed that the geographic area of Los Angeles was larger in this dataset than in the liquor store dataset. To account for this difference I shrunk the crime locations data set so that it covered the same area as the liquor store data.
+Next I converted the latitude and longitude values from string to floats and stored them in a latitude list and a longitude list. I noticed that the geographic area of Los Angeles was larger in this dataset than in the liquor store dataset. To account for this difference I shrunk the crime locations data set so that it covered the same area as the liquor store data.
 
 
 ```python
