@@ -6,14 +6,14 @@ I decided to do this analysis mainly because I wanted to become more familiar wi
 In this project I plot the geographic coordinates of liquor stores in Los Angeles and then use K-means Clustering to plot centroids of the store locations. I then repeat these steps except I use the coordinates of assualt crimes in Los Angeles instead coordinates of liquor stores. Finally, I compare the locations of the liquor store and assault centroids to see how near they are. 
 
 ### Data Sources
-The addresses of the liquor stores came a data tset posted on the [website](https://www.abc.ca.gov/datport/DataExport.html) of the Caliornia Department of Alocholic Beverage Control. To find the latitude and longiutde of the stores, the addresses were fed into google's [geocode api](https://developers.google.com/maps/documentation/geocoding/start).
+The addresses of the liquor stores came from a data set posted on the [website](https://www.abc.ca.gov/datport/DataExport.html) of the Caliornia Department of Alocholic Beverage Control. To find the latitude and longiutde of the stores, the addresses were fed into google's [geocode api](https://developers.google.com/maps/documentation/geocoding/start).
 
 The assault coordinates were taken from the City of Los Angeles [crime data set](https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq). This data set contained the latitude and longitude of all assault crimes within the last year. The exact location of the crimes were not given for privacy reasons but the data set does provide coordinates that reflect the nearest 100 block. For example, a crime that actually occured at 241 W Adams Blvd would be given a location of 200 W Adams Blvd in the data set.
 
 ### Data Munging
 
 
-I imported the data set from California Department of ABC and then subsetted the data so that it included only Los Angeles stores and only stores with type 20 or 21 licenses. Type 20 and 21 licenses were chosen because these tends to belong to liquor stores.  
+I imported the data set from California Department of ABC and then subsetted the data so that it included only Los Angeles stores and only stores with type 20 or 21 licenses. Type 20 and 21 licenses were chosen because these tend to belong to liquor stores.  
 
 
 ```python
