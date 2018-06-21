@@ -4,3 +4,4 @@ twitterapi.py
 README.ipynb
 SSE_functions.py
 config.py
+.gitignore
