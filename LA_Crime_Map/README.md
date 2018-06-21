@@ -3,10 +3,10 @@
 
 I decided to do this analysis mainly because I wanted to become more familiar with python's K-means Clustering tools. The idea for this project came from Bill Chambers's [analysis](http://billchambers.me/projects/2015/03/31/kmeans-clustering-sf-crime-data.html) on the relationship between liquor stores and assault in San Francsico. 
 
-In this project I plot the geographic coordinates of liquor stores in Los Angeles and then use K-means Clustering to plot centroids of the store locations. I then repeat these steps except I use the coordinates of assualt crimes in Los Angeles instead coordinates of liquor stores. Finally, I compare the locations of the liquor store and assault centroids to see how near they are. 
+In this project I plot the geographic coordinates of liquor stores in Los Angeles and then use K-means Clustering to plot centroids of the store locations. I then repeat these steps with the coordinates of assualt crimes in Los Angeles. Finally, I compare the locations of the liquor store and assault centroids to see how near they are. 
 
 ### Data Sources
-The addresses of the liquor stores came from a data set posted on the [website](https://www.abc.ca.gov/datport/DataExport.html) of the Caliornia Department of Alocholic Beverage Control. To find the latitude and longiutde of the stores, the addresses were fed into google's [geocode api](https://developers.google.com/maps/documentation/geocoding/start).
+The addresses of the liquor stores came from a data set posted on the [website](https://www.abc.ca.gov/datport/DataExport.html) of the California Department of Alocholic Beverage Control. To find the latitude and longiutde of the stores, the addresses were fed into google's [geocode api](https://developers.google.com/maps/documentation/geocoding/start).
 
 The assault coordinates were taken from the City of Los Angeles [crime data set](https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq). This data set contained the latitude and longitude of all assault crimes within the last year. The exact location of the crimes were not given for privacy reasons but the data set does provide coordinates that reflect the nearest 100 block. For example, a crime that actually occured at 241 W Adams Blvd would be given a location of 200 W Adams Blvd in the data set.
 
@@ -35,7 +35,7 @@ for address in addresses:
         print("IndexError!")
 ```
 
-I then turned the latitude and longitude data into a dataframe called 'store_locations' and removed the latitudes and longitudes that were far outside of Los Angeles.
+I then turned the latitude and longitude data into a dataframe called 'store_locations' and removed the latitudes and longitudes that were far outside of Los Angeles. Some latitude and longitude figures were probably outstide of Los Angeles because the geocode API could not find certain addresses within LA.
 
 
 ```python
@@ -96,7 +96,7 @@ from sklearn.cluster import KMeans
 
 One of the first steps when using K-means is to choose how many centroids you want the algorithm to create.
 
-In this project I use the elbow method to get an idea of the appropriate number of centroids to use. The basic idea is you create a graph with number of centroids in the x-axis and on the y-axis you have a value that captures how far away points are from their centroids. For that distance from centroid value, I calculated the sum of squares error for each cluster and added them together.
+In this project I use the elbow method to get an idea of the appropriate number of centroids to use. The basic idea is you create a graph with number of centroids in the x-axis and on the y-axis you have a value that captures how far away points are from their centroids. For the distance from centroid value, I calculated the sum of squares error for each cluster and added them together.
 
 The area of the graph that resembles an elbow is a good guess for the number of centroid you should use.
 
@@ -142,6 +142,6 @@ Here is a comparison of the assault clusters and the liquor store clusters. The 
 
 ## Observations
 
-There is some evidence of a relationship between clusters of liquor stores and clusters of assaults in Los Angeles. The clusters in the north central part of the city and the north east part of the city cover the same area. Also, that empty patch centered at (33.4, -118.375), the Beverly Hills area, has no centriods in it. At the same time, many of the crime centriods are not near the store centroids. I would say there may be a connection between liquor store and assault crime location but there is a lot more analysis to do. For example, it would be interesting to sea how clusters of assaults compare with clusters of population in the city. Perhaps there is only a relationship between liquor stores and assualts because liquor stores are a proxy for population density.
+There is some evidence of a relationship between clusters of liquor stores and clusters of assaults in Los Angeles. The clusters in the north central part of the city and the north east part of the city cover the same area. Also, that empty patch centered at (33.4, -118.375), the Beverly Hills area, has no centriods of either type in it. At the same time, many of the crime centriods are not near the store centroids. I would say there may be a connection between liquor store and assault crime location but there is a lot more analysis to do. For example, it would be interesting to sea how clusters of assaults compare with clusters of population in the city. Perhaps there is only a relationship between liquor stores and assualts because liquor stores are a proxy for population density.
 
 The point of the this project was mainly to learn more about K-means clustering in Python and to begin to explore relationships between Los Angeles's geographic data.
