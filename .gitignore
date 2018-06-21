@@ -2,13 +2,5 @@ twitterapi.py
 .ipynb_checkpoints
 .DS_Store
 README.ipynb
-store_locations.csv
-K-Means_Analysis.ipynb
-K-means_practice.ipynb
-Liquor_Store_Data.ipynb
-m_tape460.csv
 SSE_functions.py
-crime_location.csv
-crime_incident_data2017.csv
-Crime_Data_from_2010_to_Present.csv
-Crime_Data.ipynb
+config.py
