@@ -1,4 +1,4 @@
-Click [here](https://public.tableau.com/profile/alex.matthiessen#!/vizhome/Citi_Bike_HW/Dashboard1) to view my Tableau dashboard of Citi Bike data from the last three months.
+Click [here](https://public.tableau.com/profile/alex.matthiessen#!/vizhome/Citi_Bike_HW/Dashboard1) to view my Tableau dashboard of Citi Bike data from the last three months. View the dashboard in full screen for the best data exploration experience.
 
 Some interesting observations:
 
