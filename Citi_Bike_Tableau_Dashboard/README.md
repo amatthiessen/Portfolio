@@ -1,10 +1,12 @@
-## Citi Bike Data
+## Citi Bike Dashboard
 
 Click [here](https://public.tableau.com/profile/alex.matthiessen#!/vizhome/Citi_Bike_HW/Dashboard1) to view my Tableau dashboard of Citi Bike data from the last three months. View the dashboard in full screen for the best data exploration experience.
 
 ### Data
 
 The data set for this dashboard is taken from https://s3.amazonaws.com/tripdata/index.html, a webpage that Citi Bike maintains to publish its bike trip data.
+
+
 
 Some interesting observations:
 
