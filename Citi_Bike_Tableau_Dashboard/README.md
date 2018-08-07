@@ -8,8 +8,8 @@ The data set for this dashboard is taken from https://s3.amazonaws.com/tripdata/
 
 
 
-Some interesting observations:
+### Interesting observations:
 
--Between midnight and 4:00am the most popular stations are in the lower west part of Manhattan. In the middle of the day the most popular stations are in Midtown Manhattan and in the late afternoon the east side of Manhattan becomes the most active area.
+- Between midnight and 4:00am the most popular stations are in the lower west part of Manhattan. In the middle of the day the most popular stations are in Midtown Manhattan and in the late afternoon the east side of Manhattan becomes the most active area.
 
--Between midnight and 7:00am the ratio of subscriber rides to customer rides increases sharply. Customers are those who pay Citi Bike a fee per trip and subscribers pay Citi Bike a subscription fee.
+- Between midnight and 7:00am the ratio of subscriber rides to customer rides increases sharply. Customers are those who pay Citi Bike a fee per trip and subscribers pay Citi Bike a subscription fee.
