@@ -8,7 +8,7 @@ The data set for this dashboard is taken from https://s3.amazonaws.com/tripdata/
 
 
 
-### Interesting observations:
+### Interesting Observations:
 
 - Between midnight and 4:00am the most popular stations are in the lower west part of Manhattan. In the middle of the day the most popular stations are in Midtown Manhattan and in the late afternoon the east side of Manhattan becomes the most active area.
 
