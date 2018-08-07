@@ -42,7 +42,7 @@ Below are the regression coefficients and other regression statistics. All of th
 
 ![Regression Statistics](images/regression.png)
 
-If you are interested in the feature engineering process for this regression take a look at the process here.
+If you are interested in the feature engineering process for this regression take a look at the process [here](https://github.com/amatthi55/Portfolio/blob/master/Dodger_Stadium_Regression/Linear%20Regression.ipynb).
 
 ##### Evidence for Reliability of Regression:
 
