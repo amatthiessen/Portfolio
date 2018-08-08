@@ -4,7 +4,7 @@
 How accurately can a linear regression predict attendance at individual Dodger home games? I built a linear regression to answer that question and to see if the model produces any useful insights for the Dodgers.
 
 
-![Dodger Stadium](images/stadium.jpg)
+![Dodger Stadium](PNGs/stadium.jpg)
 
 
 
@@ -40,7 +40,7 @@ Dependent Variable Definition:
 
 Below are the regression coefficients and other regression statistics. All of the independent variables were normalized.
 
-![Regression Statistics](images/regression.png)
+![Regression Statistics](PNGs/regression.png)
 
 If you are interested in the feature engineering process for this regression take a look at the process [here](https://github.com/amatthi55/Portfolio/blob/master/Dodger_Stadium_Regression/Linear%20Regression.ipynb).
 
@@ -54,7 +54,7 @@ If you are interested in the feature engineering process for this regression tak
 - Times series data can make linear regression models poor predictors.
 - The below chart of the residuals shows heteroskedasticity (the variance of residuals decreases as the predicted value increases).
 
-![Regression Statistics](images/residuals.png)
+![Regression Statistics](PNGs/residuals.png)
 
 As we can see from the above residual chart, most predicted values are within 5,000 of the actual attendance number. We can also see linearity in the residual chart, suggesting that the model is missing one or more important features. 
 
