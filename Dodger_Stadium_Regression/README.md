@@ -62,6 +62,7 @@ As we can see from the above residual chart, most predicted values are within 5,
 ## Regession Model Obervations
 - The Is_Day coefficient indicates that day games on average attract less fans than night games. This suggests that the Dodgers should attempt to host as many games as possible at night.
 - The Bobble_head coefficient is around 5,000 which suggests that bobble head games attract around 5,000 more fans than regular games. Perhaps the Dodgers could use this information to better understand the profitability of the bobble head promotions.
-- The team that attracts the largest crowd at Dodger Stadium is the New York Yankees, followed by the Los Angeles Angeles and the Boston Red Sox. The Dodger may not want to schedule these teams for opening, since opening day already attracts a significantly larger than average crowd.
+- The team that attracts the largest crowd at Dodger Stadium is the New York Yankees, followed by the Los Angeles Angeles and the Boston Red Sox. The Dodger may not want to schedule these teams for opening day since opening day already attracts a significantly larger than average crowd.
 - The model has an adjusted R squared score of around .4 which is not a terrible score but I am sure it could be improved if more features, such as Dodgers ad spend and ticket prices, were added to the model. Unfortunately I do not have access to the data of these missing features.
+- Overall, the linear regression, trained with easily accessible data, is a so-so predictor of Dodger Stadium attendance but it does shed light on the forces affecting attendance.
 
