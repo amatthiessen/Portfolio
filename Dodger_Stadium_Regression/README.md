@@ -4,7 +4,7 @@
 How accurately can a linear regression predict attendance at individual Dodger home games? I built a linear regression to answer that question and to see if the model produces any useful insights for the Dodgers.
 
 
-![Dodger Stadium](PNGs/stadium.jpg)
+![Dodger Stadium](PNGs/stadium.png)
 
 
 
