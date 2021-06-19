@@ -1,1 +1,1 @@
-Test
+As a business analyst I am interested in developing analytics skills that reveal important KPIs and strategies for retaining customers. Understanding what makes customers churn is good way to find these insights. That is why for this project I decided to analyze why customers at a Telecom company were churning. I use a logistic regression model as a lens to see what drives customer churn and offer ideas on how to respond to this observations.
