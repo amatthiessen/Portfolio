@@ -1,1 +1,6 @@
-As a business analyst I am interested in developing analytics skills that reveal important KPIs and strategies for retaining customers. Understanding what makes customers churn is good way to find these insights. That is why for this project I decided to analyze why customers at a Telecom company were churning. In this project I build a logistic regression model and use it as a lens to understand what drives customers to cancel their subscription. The data set is from a Kaggle competition called "Customer Churn Prediction 2020" (https://www.kaggle.com/c/customer-churn-prediction-2020/overview)
+#Customer Churn Prediction
+
+As a business analyst I am interested in developing analytics skills that reveal important KPIs and strategies for retaining customers. Understanding what drives customer churn is a good way to find these important business metrics and insights. That is why for this project I decided to analyze why customers at a Telecom company were churning. In this project I build a logistic regression model and use it as a lens to understand what drives customers to cancel their subscription. The data set is from a Kaggle competition called "Customer Churn Prediction 2020" (https://www.kaggle.com/c/customer-churn-prediction-2020/overview)
+
+###Data
+
