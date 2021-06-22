@@ -43,6 +43,8 @@ Dependent Variable Definition:
 
 
 ## Regession Model Obervations
-- 
+- Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time improve the experience or at least calculate how many users we might retain if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
+- A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see their is explanation for why they are so likely to leave. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
+
 
 
