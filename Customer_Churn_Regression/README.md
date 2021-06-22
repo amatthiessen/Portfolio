@@ -14,7 +14,7 @@ What causes customer churn at Telecom companies? In this project I build a logis
 
 ### Logistic Regression
 
--Independent Variable Definitions:
+Independent Variable Definitions:
 
 -"total_day_charge", numerical. Total charge of day calls.
 
@@ -22,14 +22,27 @@ What causes customer churn at Telecom companies? In this project I build a logis
 
 -"total_night_charge", numerical. Total charge of night calls.
 
--"total_intl_charge", numerical. Total charge of international calls
+-"total_intl_charge_w_plan", numerical. Total charge of international calls for those with an international phone plan.
 
--"number_customer_service_calls", numerical. Number of calls to customer service
+-"total_intl_charge_w0_plan", numerical. Total charge of international calls for those without an international phone plan.
+
+-"number_customer_service_calls", numerical. Number of calls to customer service.
 
 
 Dependent Variable Definition:
 
 -"churn", 𝑦𝑒𝑠/𝑛𝑜. Customer churn.
 
+
+![Regression](PNGs/regression.png)
+
+![Odds_Ratio](PNGs/odds_ratio.png)
+
+
+
+
+
+## Regession Model Obervations
+- 
 
 
