@@ -10,7 +10,7 @@ What causes customer churn at Telecom companies? In this project I build a logis
 
 -Like most customer churn datasets, this one has a class imbalance problem. Only 14% of the obervations are users that churned. To offset the issues caused by the class imbalance, the churned user records were resampled with replacement until the ratio of churned to active customers was 1:1.
 
--Below are the features I decided to include in my final model.
+-Below are the features I decided to include in the final model.
 
 ### Logistic Regression
 
@@ -50,10 +50,20 @@ Dependent Variable Definition:
 
 <img src="https://github.com/amatthiessen/Portfolio/blob/master/Customer_Churn_Regression/PNGs/calibration.png" width="600">
 
-## 
+## Evidence for Reliability of Regression:
+
+- Both the signs and the size of the various coefficients make sense
+
+- All p-values are small
+
+- AUC is above 0.7
+
+## Evidence against Reliability of Regression:
+
+- Three of the bins in the calibraiton curve are about 10% off from perfect calibration
 
 ## Regession Model Obervations
-- Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time reevaluate the experience and calculate how many users we might retain if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
+- Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time to reevaluate the experience and calculate how many users might be retained if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
 - A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see if there is an explanation for their high probability of churining. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
-- As customers are charged another dollar for day calls, evening calls, night calls, or international calls without a plan the increase in odds of churning is about the samee, around 8%. This 8% increase in odds of churning is a reference point that shows how likely international plan users are to churn.
+- As customers are charged another dollar for day calls, evening calls, night calls, or international calls without a plan the increase in odds of churning is about the samee, around 8%. This 8% increase in odds of churning is a reference point that shows the high liklihood of international plan users to churn.
 
