@@ -42,9 +42,16 @@ Dependent Variable Definition:
 
 ## Regression Performance
 
+![ROC](PNGs/ROC.png)
+
+<img src="https://github.com/favicon.ico" width="48">
+
 
 ## Regression Calibration
 
+![calibration](PNGs/calibration.png)
+
+## 
 
 ## Regession Model Obervations
 - Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time reevaluate the experience and calculate how many users we might retain if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
