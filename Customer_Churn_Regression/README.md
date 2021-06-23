@@ -42,14 +42,13 @@ Dependent Variable Definition:
 
 ## Regression Performance
 
-![ROC](PNGs/ROC.png)
 
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://github.com/amatthiessen/Portfolio/blob/master/Customer_Churn_Regression/PNGs/ROC.png" width="600">
 
 
 ## Regression Calibration
 
-![calibration](PNGs/calibration.png)
+<img src="https://github.com/amatthiessen/Portfolio/blob/master/Customer_Churn_Regression/PNGs/calibration.png" width="600">
 
 ## 
 
