@@ -1,6 +1,6 @@
 # Customer Churn Prediction
 
-What causes customer churn at Telecom companies? In this project I build a logistic regression model and use it as a lens to understand what drives customers to cancel their subscription. The data set is from a Kaggle competition called "Customer Churn Prediction 2020" (https://www.kaggle.com/c/customer-churn-prediction-2020/overview)
+What causes customer churn at Telecom companies? In this project I build a logistic regression model and use it as a lens to understand what drives customers to cancel their phone subscriptions. The data set is from a Kaggle competition called "Customer Churn Prediction 2020" (https://www.kaggle.com/c/customer-churn-prediction-2020/overview)
 
 ![Churn](PNGs/CHURN.png)
 
@@ -33,18 +33,21 @@ Dependent Variable Definition:
 
 -"churn", 𝑦𝑒𝑠/𝑛𝑜. Customer churn.
 
+## Regression Output
 
 ![Regression](PNGs/regression.png)
 
 ![Odds_Ratio](PNGs/odds_ratio.png)
 
 
+## Regression Performance
 
+
+## Regression Calibration
 
 
 ## Regession Model Obervations
-- Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time improve the experience or at least calculate how many users we might retain if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
-- A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see their is explanation for why they are so likely to leave. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
-
-
+- Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time reevaluate the experience and calculate how many users we might retain if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
+- A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see if there is an explanation for their high probability of churining. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
+- As customers are charged another dollar for day calls, evening calls, night calls, or international calls without a plan the increase in odds of churning is about the samee, around 8%. This 8% increase in odds of churning is a reference point that shows how likely international plan users are to churn.
 
