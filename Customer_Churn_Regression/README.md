@@ -24,7 +24,7 @@ Independent Variable Definitions:
 
 -"total_intl_charge_w_plan", numerical. Total charge of international calls for those with an international phone plan.
 
--"total_intl_charge_w0_plan", numerical. Total charge of international calls for those without an international phone plan.
+-"total_intl_charge_wo_plan", numerical. Total charge of international calls for those without an international phone plan.
 
 -"number_customer_service_calls", numerical. Number of calls to customer service.
 
@@ -64,6 +64,6 @@ Dependent Variable Definition:
 
 ## Regession Model Obervations
 - Every customer service call increases the odds that a customer will churn by about 85%. If the customer service experience has not been evaluated lately, it could be a good time to reevaluate the experience and calculate how many users might be retained if the experience were more efficient. Another idea is to give customer service reps the ability to offer discounts to users when they see fit to try and offset the frustrations the user may be calling about.
-- A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see if there is an explanation for their high probability of churining. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
-- As customers are charged another dollar for day calls, evening calls, night calls, or international calls without a plan the increase in odds of churning is about the samee, around 8%. This 8% increase in odds of churning is a reference point that shows the high liklihood of international plan users to churn.
+- A one dollar increae in the phone bill of a user who called international with an internationl plan increases the odds of churn by about 150%. These users have the highest probability of churn and it would be heplful to investigate this further with any other available data on these users to see if there is an explanation for their high probability of churning. Perhaps these are users who are living abroard temporariliy and most of them churn after they return to their home country.
+- As customers are charged another dollar for day calls, evening calls, night calls, or international calls without a plan the increase in odds of churning is about the same, around 8%. This information could be useful if we knew more about the demographics of each calling group and were able to confirm or challenge assumptions we had about our customer personas.
 
