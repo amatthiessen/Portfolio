@@ -6,7 +6,7 @@ What causes customer churn at Telecom companies? In this project I build a logis
 
 ### Data
 
--The dataset has 4250 observations. Each observaton contains 19 features and 1 boolean variable "churn" which indicates whether or not that particular user churned.
+-The dataset has 4,250 observations. Each observaton contains 19 features and 1 boolean variable "churn" which indicates whether or not that particular user churned.
 
 -Like most customer churn datasets, this one has a class imbalance problem. Only 14% of the obervations are users that churned. To offset the issues caused by the class imbalance, the churned user records were resampled with replacement until the ratio of churned to active customers was 1:1.
 
